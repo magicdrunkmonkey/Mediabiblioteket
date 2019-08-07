@@ -36,6 +36,7 @@ Först behöver du ladda ner mappen med samtliga källkodsfiler.
 Öppna sedan upp Eclipse och öppna huvudmenyn _File_ -> _Import_ -> _General_ -> _Projects from Folder or Archive_. 
 Sedan bläddrar du fram mappen med filerna i genom att trycka på _Directory..._ och välja den och därefter trycka på _Finish_. 
 
+OBS! Tänk på att du efter importen behöver flytta över mappen _files_ (som innehåller nödvändiga datafiler) under Mediabibliotek till Huvudkatalogen för projektet för att applikationen ska kunna hitta den.
 
 
 #### Steg 4 (Köra applikationen)
