@@ -30,10 +30,8 @@ Välj den senaste versionen och följ installationsanvisningarna.
 
 #### Steg 3 (Importera applikationen till Eclipse)
 
-Först behöver du ladda ner alla källkodsfiler lokalt till din dator från Github. 
-Tänk på att skapa en mapp som du sedan lägger samtliga filer du har laddat ner i denna mappen. 
-Döp denna till ett lämpligt namn (används senare i Eclipse för import).  
-
+Först behöver du ladda ner mappen med samtliga källkodsfiler. 
+ 
 
 Öppna sedan upp Eclipse och öppna huvudmenyn _File_ -> _Import_ -> _General_ -> _Projects from Folder or Archive_. 
 Sedan bläddrar du fram mappen med filerna i genom att trycka på _Directory..._ och välja den och därefter trycka på _Finish_. 
@@ -43,7 +41,7 @@ Sedan bläddrar du fram mappen med filerna i genom att trycka på _Directory..._
 #### Steg 4 (Köra applikationen)
 
 När du väl har importerat applikationen i Eclipse så kan testköra applikationen genom att gå till huvudklassen _GUI.java_,
-högerklicka i filen och välja _Run As -> Java Application. 
+högerklicka i filen och välja _Run As_ -> _Java Application_. 
 
 
 
@@ -52,7 +50,8 @@ OBS! För att kunna logga in i programmet vid körning finns det förvalda anvä
 De olika medier som går att söka på finns i en annan CSV-fil, _Media.txt_. 
 
 
-
+</br>
+</br>
 Sedan är det bara att prova sig fram!
 
 
