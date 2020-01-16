@@ -12,7 +12,7 @@ av olika slags media. Den är byggd med Java Swing som är Javas officiella API 
 
 Ladda ner Eclipse IDE ifrån:
 
-https://www.eclipse.org/downloads/packages/release/2019-06/r/eclipse-ide-java-developers 
+https://www.eclipse.org/downloads/packages/release/2019-12/r/eclipse-ide-java-developers 
 
 OBS! Se till att välja rätt version för din dator och följ instruktionerna för nedladdningen. 
 
