@@ -51,6 +51,14 @@ OBS! För att kunna logga in i programmet vid körning finns det förvalda anvä
 De olika medier som går att söka på finns i en annan CSV-fil, _Media.txt_. 
 
 
+#### Steg 5 (hämta hem och installera testramverket Junit)
+
+För att börja testa behöver du installera Junit i Eclipse. Det finns en tydlig och bra artikel om detta på Guru99.com, närmare bestämt på https://www.guru99.com/download-installation-junit.html. Du kan med fördel läsa hela artikelserien med start på https://www.guru99.com/junit-tutorial.html
+
+Du bör även ta en stund (11:25) att titta på en utmärkt film på Youtube av McProgramming: https://www.youtube.com/watch?v=I8XXfgF9GSc
+
+
+
 </br>
 </br>
 Sedan är det bara att prova sig fram!
