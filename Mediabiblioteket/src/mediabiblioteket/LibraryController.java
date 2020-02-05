@@ -123,7 +123,7 @@ public class LibraryController
 		
 		try
 		{
-			PrintWriter theOutPutf = new PrintWriter(new FileOutputStream(new File("files/Utlanade.txt")));
+			PrintWriter theOutPutf = new PrintWriter(new FileOutputStream(new File("Mediabiblioteket/files/Utlanade.txt")));
 			
 			Iterator<String> iter = borrowed.iterator();
 			
@@ -438,7 +438,7 @@ public class LibraryController
 	{
 		try
 		{
-			Scanner theScanner = new Scanner(new File("files/Utlanade.txt"));
+			Scanner theScanner = new Scanner(new File("Mediabiblioteket/files/Utlanade.txt"));
 			StringTokenizer theTokenizer;
 
 			while (theScanner.hasNext())
@@ -478,7 +478,7 @@ public class LibraryController
 		try
 		{
 
-			Scanner theScanner = new Scanner(new File("files/Lantagare.txt"));
+			Scanner theScanner = new Scanner(new File("Mediabiblioteket/files/Lantagare.txt"));
 			StringTokenizer theTokenizer;
 
 			while (theScanner.hasNext())
@@ -511,7 +511,7 @@ public class LibraryController
 		try
 		{
 			StringTokenizer theTokenizer;
-			Scanner theScanner = new Scanner(new File("files/Media.txt"));
+			Scanner theScanner = new Scanner(new File("Mediabiblioteket/files/Media.txt"));
 
 			while (theScanner.hasNext())
 			{
