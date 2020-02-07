@@ -61,7 +61,8 @@ public class LibraryController
 	 */
 	public boolean checkUserInput(String inputString)
 	{
-		String regex = "^[\\w.-]+$";
+
+		String regex = "^[\\w.-]+$"; //Tillåter a-z, A-Z, 1-9, -
 		try
 		{
 			if(inputString.matches(regex)==false)
