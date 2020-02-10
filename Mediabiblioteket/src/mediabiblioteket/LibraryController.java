@@ -18,6 +18,14 @@ import collections.*;
  */
 public class LibraryController
 {
+	public Borrower getCurrentBorrower() {
+		return currentBorrower;
+	}
+
+	public void setCurrentBorrower(Borrower currentBorrower) {
+		this.currentBorrower = currentBorrower;
+	}
+
 	Borrower currentBorrower;
 	GUI theGUI;
 	ArrayList<Media> allMediaObjects;
@@ -115,8 +123,8 @@ public class LibraryController
 
 	/**
 	 * Skapar en fil och skriver innehållet i Content i filen.
-	 * @param Content. Innehehållet som ska skrivas över till filen. 
-	 * @param FileNameIncPath. Sökvägen till filen.
+	 * @param Content Innehehållet som ska skrivas över till filen.
+	 * @param FileNameIncPath Sökvägen till filen.
 	 */
 	public void writeToFile()
 	{
@@ -127,8 +135,8 @@ public class LibraryController
 			PrintWriter theOutPutf = new PrintWriter(new FileOutputStream(new File("Mediabiblioteket/files/Utlanade.txt")));
 			
 			Iterator<String> iter = borrowed.iterator();
-			
-			while(iter.hasNext())
+
+				while(iter.hasNext())
 			{
 				theOutPutf.println(iter.next());
 				theOutPutf.flush();
@@ -146,7 +154,7 @@ public class LibraryController
 	
 	/**
 	 * Lånar media
-	 * @param theMedia. Media objekt
+	 * @param theMedia Media objekt
 	 */
 	public void borrowMedia(Media theMedia)
 	{
@@ -163,7 +171,7 @@ public class LibraryController
 	
 	/**
 	 * Lämnar tillbaka Media
-	 * @param theMedia. Media objekt
+	 * @param theMedia Media objekt
 	 */
 	public void returnMedia(Media theMedia)
 	{
@@ -178,7 +186,7 @@ public class LibraryController
 
 	/**
 	 * Kollar om en Låntagare existerar
-	 * @param borrowerID. Låntagarens ID
+	 * @param borrowerID Låntagarens ID
 	 * @return. True om denne existerar, annars false
 	 */
 	public boolean checkIfBorrowerExist(String borrowerID)
@@ -228,7 +236,7 @@ public class LibraryController
 	
 	/**
 	 * Hämta Media objekt med ObjectID genom att använda binär sökning
-	 * @param ID. Media ObjectID
+	 * @param ID Media ObjectID
 	 * @return. Media objektet som söks. null om det sökta objektet inte existerar
 	 */
 	public Media getMedia(String ID)
@@ -261,7 +269,7 @@ public class LibraryController
 	
 	/**
 	 * Visa detaljerat informatiom om ett visst Media
-	 * @param theString. Texten på det sökta Media objektet
+	 * @param theString Texten på det sökta Media objektet
 	 * @return. Media objektet som man vill ha detaljerat information om 
 	 */
 	public void showSelectedMediaInfo(String theString)
@@ -293,7 +301,7 @@ public class LibraryController
 	
 	/**
 	 * Sök Media genom att skriva in valfritt sträng, jämför flera olika attribut.  
-	 * @param theSearchString. Texten till det sökta Media
+	 * @param theSearchString Texten till det sökta Media
 	 */
 	public void searchMediaAllByString(String theSearchString)
 	{
@@ -346,7 +354,7 @@ public class LibraryController
 	
 	/**
 	 * Returnera vald Media från sökresultat
-	 * @param theString. Valda texten från sökta media
+	 * @param theString Valda texten från sökta media
 	 * @return Media objekt
 	 */
 	public Media getMediaFromSearchResult(String theString)
@@ -370,7 +378,7 @@ public class LibraryController
 	
 	/**
 	 * Sök Media-titel genom att skriva in en sträng
-	 * @param theSearchString. Texten till sökta Media
+	 * @param theSearchString Texten till sökta Media
 	 */
 	public void searchMediaTitleByString(String theSearchString)
 	{
@@ -412,7 +420,7 @@ public class LibraryController
 	
 	/**
 	 * returnera låntagare
-	 * @param Ssn. personnummer
+	 * @param Ssn personnummer
 	 * @return Låntagare
 	 */
 	public Borrower getBorrower(String Ssn)

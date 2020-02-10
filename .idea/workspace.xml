@@ -2,14 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5c8afd73-7ee4-4eac-acde-55988f34b490" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apiguardian_apiguardian_api_1_1_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_jupiter_junit_jupiter_5_6_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_jupiter_junit_jupiter_api_5_6_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_jupiter_junit_jupiter_engine_5_6_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_jupiter_junit_jupiter_params_5_6_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_platform_junit_platform_commons_1_6_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_platform_junit_platform_engine_1_6_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_opentest4j_opentest4j_1_2_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Mediabiblioteket/UnitTest/collections/ArrayListTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Mediabiblioteket/UnitTest/mediabiblioteket/LibraryControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Mediabiblioteket/UnitTest/mediabiblioteket/LibraryControllerTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Mediabiblioteket/src/mediabiblioteket/LibraryController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Mediabiblioteket/src/mediabiblioteket/LibraryController.java" afterDir="false" />
@@ -18,6 +11,9 @@
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CoverageViewManager">
+    <option name="myElementSize" value="209" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -43,6 +39,7 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="JavaClassFindUsagesOptions.isSearchForTextOccurrences" value="false" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
@@ -56,27 +53,15 @@
   </component>
   <component name="RecentsManager">
     <key name="CreateTestDialog.RecentsKey">
+      <recent name="collections" />
       <recent name="mediabiblioteket" />
     </key>
     <key name="CreateTestDialog.Recents.Supers">
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.LibraryControllerTest.checkInputOnlyDigits">
-    <configuration name="GUI" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="mediabiblioteket.GUI" />
-      <module name="Mediabiblioteket" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="mediabiblioteket.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="LibraryControllerTest.checkInputOnlyDigits" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="JUnit.LibraryControllerTest">
+    <configuration name="LibraryControllerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Mediabiblioteket" />
       <extension name="coverage">
         <pattern>
@@ -86,7 +71,22 @@
       </extension>
       <option name="PACKAGE_NAME" value="mediabiblioteket" />
       <option name="MAIN_CLASS_NAME" value="mediabiblioteket.LibraryControllerTest" />
-      <option name="METHOD_NAME" value="checkInputOnlyDigits" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="LibraryControllerTest.checkInputOnlyDigits_inputValidNumbers_CheckIfTrue" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Mediabiblioteket" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="mediabiblioteket.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="mediabiblioteket" />
+      <option name="MAIN_CLASS_NAME" value="mediabiblioteket.LibraryControllerTest" />
+      <option name="METHOD_NAME" value="checkInputOnlyDigits_inputValidNumbers_CheckIfTrue" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -108,11 +108,45 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="LibraryControllerTest.test_checkInputOnlyDigits_inputValidNumbers_CheckIfTrue" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Mediabiblioteket" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="mediabiblioteket.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="mediabiblioteket" />
+      <option name="MAIN_CLASS_NAME" value="mediabiblioteket.LibraryControllerTest" />
+      <option name="METHOD_NAME" value="test_checkInputOnlyDigits_inputValidNumbers_CheckIfTrue" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="LibraryControllerTest.test_writeToFile" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Mediabiblioteket" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="mediabiblioteket.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="mediabiblioteket" />
+      <option name="MAIN_CLASS_NAME" value="mediabiblioteket.LibraryControllerTest" />
+      <option name="METHOD_NAME" value="test_writeToFile" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.LibraryControllerTest.checkInputOnlyDigits" />
+        <item itemvalue="JUnit.LibraryControllerTest" />
+        <item itemvalue="JUnit.LibraryControllerTest.test_writeToFile" />
+        <item itemvalue="JUnit.LibraryControllerTest.test_checkInputOnlyDigits_inputValidNumbers_CheckIfTrue" />
+        <item itemvalue="JUnit.LibraryControllerTest.checkInputOnlyDigits_inputValidNumbers_CheckIfTrue" />
         <item itemvalue="JUnit.LibraryControllerTest.checkUserInput" />
-        <item itemvalue="Application.GUI" />
       </list>
     </recent_temporary>
   </component>
@@ -158,7 +192,13 @@
       <option name="presentableId" value="LOCAL−00003" />
       <updated>1581063937447</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL−00004" summary="Skapat enhetstest för checkUserInput() och checkOnlyDigits()">
+      <created>1581078236022</created>
+      <option name="number" value="LOCAL−00004" />
+      <option name="presentableId" value="LOCAL−00004" />
+      <updated>1581078236022</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -167,18 +207,23 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="pom.xml med selenium och junit" />
     <MESSAGE value="ändrat sökvägen till filerna i LibraryController så att de hittar rätt och IML fil för att testa om det hjälper de andra" />
-    <option name="LAST_COMMIT_MESSAGE" value="ändrat sökvägen till filerna i LibraryController så att de hittar rätt och IML fil för att testa om det hjälper de andra" />
+    <MESSAGE value="Skapat enhetstest för checkUserInput() och checkOnlyDigits()" />
+    <option name="LAST_COMMIT_MESSAGE" value="Skapat enhetstest för checkUserInput() och checkOnlyDigits()" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="907" y="110" key="#com.intellij.ide.util.MemberChooser" timestamp="1581335009252">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="907" y="110" key="#com.intellij.ide.util.MemberChooser/0.0.1536.824@0.0.1536.824" timestamp="1581335009252" />
     <state x="313" y="52" key="#com.intellij.ide.util.frameworkSupport.AddFrameworkSupportDialog" timestamp="1580898553060">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="313" y="52" key="#com.intellij.ide.util.frameworkSupport.AddFrameworkSupportDialog/0.0.1366.728@0.0.1366.728" timestamp="1580898553060" />
-    <state x="171" y="0" key="CommitChangelistDialog2" timestamp="1581063935973">
+    <state x="241" y="0" key="CommitChangelistDialog2" timestamp="1581350143372">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="152" y="0" key="CommitChangelistDialog2/0.0.1366.728@0.0.1366.728" timestamp="1580901170972" />
-    <state x="171" y="0" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1581063935973" />
+    <state x="241" y="0" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1581350143372" />
     <state x="131" y="54" key="DiffContextDialog" timestamp="1580901160176">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -191,26 +236,42 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="629" y="312" key="Github.ShareDialog/0.0.1536.824@0.0.1536.824" timestamp="1581064100869" />
-    <state width="1493" height="227" key="GridCell.Tab.0.bottom" timestamp="1581077662040">
+    <state width="1493" height="2" key="GridCell.Tab.0.bottom" timestamp="1581350143457">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state width="1323" height="179" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1580899715543" />
-    <state width="1493" height="227" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1581077662040" />
-    <state width="1493" height="227" key="GridCell.Tab.0.center" timestamp="1581077662039">
+    <state width="1493" height="2" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1581350143457" />
+    <state width="1493" height="2" key="GridCell.Tab.0.center" timestamp="1581350143457">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state width="1323" height="179" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1580899715542" />
-    <state width="1493" height="227" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1581077662039" />
-    <state width="1493" height="227" key="GridCell.Tab.0.left" timestamp="1581077662039">
+    <state width="1493" height="2" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1581350143457" />
+    <state width="1493" height="2" key="GridCell.Tab.0.left" timestamp="1581350143457">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state width="1323" height="179" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1580899715542" />
-    <state width="1493" height="227" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1581077662039" />
-    <state width="1493" height="227" key="GridCell.Tab.0.right" timestamp="1581077662040">
+    <state width="1493" height="2" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1581350143457" />
+    <state width="1493" height="2" key="GridCell.Tab.0.right" timestamp="1581350143457">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state width="1323" height="179" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1580899715543" />
-    <state width="1493" height="227" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1581077662040" />
+    <state width="1493" height="2" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1581350143457" />
+    <state width="1493" height="208" key="GridCell.Tab.1.bottom" timestamp="1581347800778">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="208" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1581347800778" />
+    <state width="1493" height="208" key="GridCell.Tab.1.center" timestamp="1581347800778">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="208" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1581347800778" />
+    <state width="1493" height="208" key="GridCell.Tab.1.left" timestamp="1581347800778">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="208" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1581347800778" />
+    <state width="1493" height="208" key="GridCell.Tab.1.right" timestamp="1581347800778">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="208" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1581347800778" />
     <state x="183" y="0" key="SettingsEditor" timestamp="1581063961467">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -221,12 +282,19 @@
     </state>
     <state x="275" y="96" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1580900679381" />
     <state x="309" y="109" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1581063950974" />
-    <state x="533" y="133" key="com.intellij.testIntegration.createTest.CreateTestDialog" timestamp="1581063873622">
+    <state x="477" y="241" key="com.intellij.ide.util.TipDialog" timestamp="1581319508532">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="533" y="133" key="com.intellij.testIntegration.createTest.CreateTestDialog/0.0.1536.824@0.0.1536.824" timestamp="1581063873622" />
+    <state x="477" y="241" key="com.intellij.ide.util.TipDialog/0.0.1536.824@0.0.1536.824" timestamp="1581319508532" />
+    <state x="533" y="133" key="com.intellij.testIntegration.createTest.CreateTestDialog" timestamp="1581079514435">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="533" y="133" key="com.intellij.testIntegration.createTest.CreateTestDialog/0.0.1536.824@0.0.1536.824" timestamp="1581079514435" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/Mediabiblioteket$LibraryControllerTest.ic" NAME="LibraryControllerTest Coverage Results" MODIFIED="1581349615009" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>mediabiblioteket.*</FILTER>
+    </SUITE>
     <SUITE FILE_PATH="coverage/Mediabiblioteket$LibraryControllerTest_checkUserInput.ic" NAME="LibraryControllerTest.checkUserInput Coverage Results" MODIFIED="1581064483331" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>mediabiblioteket.*</FILTER>
     </SUITE>
