@@ -2,7 +2,7 @@ package mediabiblioteket;
 
 import org.junit.jupiter.api.Test;
 
-import java.awt.Robot;
+import java.awt.*;
 
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -25,9 +25,10 @@ class LibraryControllerTest {
     }
 
     @Test
-    void test_checkInputOnlyDigits_inputValidNumbers_CheckIfTrue() {
+    void test_checkInputOnlyDigits_inputValidNumbers_CheckIfTrue() throws AWTException {
 
         //Tillåter endast 1-9
+        //Robot bot = new Robot();
         boolean test = libraryController.checkInputOnlyDigits("12345");
 
         assertEquals(true,test);
@@ -84,7 +85,7 @@ class LibraryControllerTest {
 
     @Test
     void test_returnMedia_checkIfMediaReturnedAfterBorrowed_falseBorrowedIfReturned() {
-        // Skapa testdata
+        // Skapa testdata, bok och låntagare
         Book testbok = new Book("Bok","Boktitel", "BokID", 1920, "Hermann Hesse");
         Borrower testB= new Borrower("testnamn", "121212-1212", "0700900909");
 
@@ -102,8 +103,24 @@ class LibraryControllerTest {
     }
 
     @Test
-    void checkIfBorrowerExist() {
+    void test_checkIfBorrowerExist_checkIfuserIDexists_returnTrueIfExists() {
+        // Mock testdata of existing userID
+        String userID1 = "900118-5555";
+        // Mock testdata of non-existing userID
+        String userID2 = "121212-1212";
+
+        // Search "Lantagare" with mock userID if exists
+        Boolean borrowerResult1 = libraryController.checkIfBorrowerExist(userID1);
+        // Search "Lantagare" with mock userID if exists
+        Boolean borrowerResult2 = libraryController.checkIfBorrowerExist(userID2);
+
+        // Jämför om resultaten är korrekt
+        assertTrue(borrowerResult1);
+        assertFalse(borrowerResult2);
     }
+
+
+
 
     @Test
     void sortMedia() {
