@@ -64,7 +64,7 @@ public class LibraryController
 
 	/**
 	 * Kollar om användaren matar in data i felaktig format och meddelar om detta.
-	 * @param inputString. Strängen som tas emot som input  
+	 * @param inputString Strängen som tas emot som input
 	 * @return. True om det är korrekt dataformat, annars False.
 	 */
 	public boolean checkUserInput(String inputString)
@@ -123,8 +123,8 @@ public class LibraryController
 
 	/**
 	 * Skapar en fil och skriver innehållet i Content i filen.
-	 * @param Content Innehehållet som ska skrivas över till filen.
-	 * @param FileNameIncPath Sökvägen till filen.
+	 * @param //Content Innehehållet som ska skrivas över till filen.
+	 * @param //FileNameIncPath Sökvägen till filen.
 	 */
 	public void writeToFile()
 	{

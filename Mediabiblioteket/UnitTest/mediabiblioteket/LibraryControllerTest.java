@@ -2,13 +2,17 @@ package mediabiblioteket;
 
 import org.junit.jupiter.api.Test;
 
+import java.awt.Robot;
+
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.Scanner;
 
 import static org.junit.jupiter.api.Assertions.*;
 
+
 class LibraryControllerTest {
+
 
     LibraryController libraryController = new LibraryController();
 
@@ -22,13 +26,15 @@ class LibraryControllerTest {
 
     @Test
     void test_checkInputOnlyDigits_inputValidNumbers_CheckIfTrue() {
+
         //Tillåter endast 1-9
-        boolean test = libraryController.checkInputOnlyDigits("121212");
+        boolean test = libraryController.checkInputOnlyDigits("12345");
+
         assertEquals(true,test);
     }
 
     @Test
-    void test_writeToFile() {
+    void test_writeToFile_writeMockdataToFile_checkIfMockdataRegistered() {
         // Fyll på strukturen borrowed med data
         String testdata = "121212-1212;123456"; // Personnummer;MedieID
         libraryController.borrowed.add(testdata);
@@ -54,17 +60,24 @@ class LibraryControllerTest {
         // Ta bort inskriven testdata
         libraryController.borrowed.removeLast();
         libraryController.writeToFile();
-
     }
 
     @Test
-    void test_borrowMedia() {
-//        //Media test_borrowMedia = new Media("Bok", "boktitel", "123", 45);
-//        Book testbok = new Book("Bok","Boktitel", "BokID", 1920, "Hermann Hesse");
-//        Borrower testB= new Borrower("testnamn", "121212-1212", "0700900909");
-//        controller.setCurrentBorrower(testB);
-//        controller.borrowMedia(testbok);
-//        assertTrue(testbok.borrowed);
+    void test_borrowMedia_checkIfMediaIsBorrowed_trueIfBorrowed() {
+        // Skapa testdata
+        Book testbok = new Book("Bok","Boktitel", "BokID", 1920, "Hermann Hesse");
+        Borrower testB= new Borrower("testnamn", "121212-1212", "0700900909");
+
+        // Registrera testboken som utlånad till testanvändaren
+        libraryController.setCurrentBorrower(testB);
+        libraryController.borrowMedia(testbok);
+
+        // Verifiera att testboken är utlånad
+        assertTrue(testbok.borrowed);
+
+        // Rensa bort inskriven testdata
+        libraryController.borrowed.removeLast();
+        libraryController.writeToFile();
 
     }
 
