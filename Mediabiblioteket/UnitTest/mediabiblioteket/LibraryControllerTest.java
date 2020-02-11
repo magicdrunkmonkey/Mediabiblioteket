@@ -83,7 +83,22 @@ class LibraryControllerTest {
 
 
     @Test
-    void returnMedia() {
+    void test_returnMedia_checkIfMediaReturnedAfterBorrowed_falseBorrowedIfReturned() {
+        // Skapa testdata
+        Book testbok = new Book("Bok","Boktitel", "BokID", 1920, "Hermann Hesse");
+        Borrower testB= new Borrower("testnamn", "121212-1212", "0700900909");
+
+        // Registrera testboken som utlånad till testanvändaren
+        libraryController.setCurrentBorrower(testB);
+        libraryController.borrowMedia(testbok);
+        libraryController.returnMedia(testbok);
+
+        // Verifiera att testboken är utlånad
+        assertFalse(testbok.borrowed);
+
+        // Rensa bort inskriven testdata
+        //libraryController.borrowed.removeLast();
+        //libraryController.writeToFile();
     }
 
     @Test
