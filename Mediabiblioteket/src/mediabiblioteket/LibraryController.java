@@ -209,11 +209,10 @@ public class LibraryController
 	}
 
 	/**
-	 * Sorteting av all Media 
+	 * Sortering av all Media
 	 */
 	public void sortMedia()
 	{
-		
 
 		for (int i = 0; i < allMediaObjects.size() - 1; i++)
 		{

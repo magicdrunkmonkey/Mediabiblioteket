@@ -35,7 +35,7 @@ class LibraryControllerTest {
     }
 
     @Test
-    void test_writeToFile_writeMockdataToFile_checkIfMockdataRegistered() {
+    void test_writeToFile_writeMockdataToFile_checkIfMockdataRegistered_GS() {
         // Fyll på strukturen borrowed med data
         String testdata = "121212-1212;123456"; // Personnummer;MedieID
         libraryController.borrowed.add(testdata);
@@ -64,7 +64,7 @@ class LibraryControllerTest {
     }
 
     @Test
-    void test_borrowMedia_checkIfMediaIsBorrowed_trueIfBorrowed() {
+    void test_borrowMedia_checkIfMediaIsBorrowed_trueIfBorrowed_GS() {
         // Skapa testdata
         Book testbok = new Book("Bok","Boktitel", "BokID", 1920, "Hermann Hesse");
         Borrower testB= new Borrower("testnamn", "121212-1212", "0700900909");
@@ -84,7 +84,7 @@ class LibraryControllerTest {
 
 
     @Test
-    void test_returnMedia_checkIfMediaReturnedAfterBorrowed_falseBorrowedIfReturned() {
+    void test_returnMedia_checkIfMediaReturnedAfterBorrowed_falseBorrowedIfReturned_GS() {
         // Skapa testdata, bok och låntagare
         Book testbok = new Book("Bok","Boktitel", "BokID", 1920, "Hermann Hesse");
         Borrower testB= new Borrower("testnamn", "121212-1212", "0700900909");
@@ -103,7 +103,7 @@ class LibraryControllerTest {
     }
 
     @Test
-    void test_checkIfBorrowerExist_checkIfuserIDexists_returnTrueIfExists() {
+    void test_checkIfBorrowerExist_checkIfuserIDexists_returnTrueIfExists_GS() {
         // Mock testdata of existing userID
         String userID1 = "900118-5555";
         // Mock testdata of non-existing userID
@@ -119,11 +119,9 @@ class LibraryControllerTest {
         assertFalse(borrowerResult2);
     }
 
-
-
-
     @Test
     void sortMedia() {
+
     }
 
     @Test
