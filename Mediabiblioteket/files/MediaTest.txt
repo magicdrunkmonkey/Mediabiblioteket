@@ -1,0 +1,4 @@
+Bok;427769;Deitel;Java how to program;2005
+Bok;874591;Guillou;Vägen till Jerusalem;1999
+Dvd;635492;Nile City 105,6;1994;Robert Gustavsson;Johan Rheborg;Henrik Schyffert
+

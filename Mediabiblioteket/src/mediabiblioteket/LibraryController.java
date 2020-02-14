@@ -45,7 +45,20 @@ public class LibraryController
 		mediaSearchResults = new LinkedList<Media>();
 		boot();
 	}
-	
+
+	/**
+	 * Konstruktor som ser till att boota systemet med samtliga Media, Borrowers, Borrowed och MediaSearchResults i ArrayList
+	 * Fyller bara arraylistor som har ifBoot är sann.
+	 */
+	LibraryController(boolean ifBoot)
+	{
+		allMediaObjects = new ArrayList<Media>(24);
+		allBorrowers = new ArrayList<Borrower>();
+		borrowed = new ArrayList<String>();
+		mediaSearchResults = new LinkedList<Media>();
+		if(ifBoot) boot();
+	}
+
 	/**
 	 * Konstruktor som ser till att boota systemet med samtliga Media, Borrowers, Borrowed och MediaSearchResults i ArrayList 
 	 * samt instantiera GUI fönstret
