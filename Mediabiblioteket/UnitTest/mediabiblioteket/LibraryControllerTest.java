@@ -20,7 +20,7 @@ class LibraryControllerTest {
     LibraryController libraryController = new LibraryController();
 
     @Test
-    void test_checkUserInput_inputNonDigits_checkIfFalse() {
+    void test_checkUserInput_inputNonDigits_expectedFalse() {
         //Tillåter endast a-z, A-Z, 1-9, -
         boolean test=  libraryController.checkUserInput("@££$€$€£€€${{${");
         assertEquals(false, test);
@@ -28,11 +28,28 @@ class LibraryControllerTest {
     }
 
     @Test
-    void test_checkInputOnlyDigits_inputValidNumbers_CheckIfTrue() throws AWTException {
+    void test_checkUserInput_inputOnlyDigits_expectedTrue() {
+        //Tillåter endast a-z, A-Z, 1-9, -
+        boolean test=  libraryController.checkUserInput("3578");
+        assertEquals(true, test);
+    }
+    @Test
+    void test_checkUserInput_inputNull_expectedFalse() {
+        //Tillåter endast a-z, A-Z, 1-9, -
+        boolean test=  libraryController.checkUserInput(null);
+        assertEquals(false,test);
+    }
+    @Test
+    void test_checkUserInput_emptyString_expectedFalse() {
+        //Tillåter endast a-z, A-Z, 1-9, -
+        boolean test=  libraryController.checkUserInput("");
+        assertEquals(false,test);
+    }
 
+    @Test
+    void test_checkInputOnlyDigits_inputValidNumbers_CheckIfTrue() {
         //Tillåter endast 1-9
-        //Robot bot = new Robot();
-        boolean test = libraryController.checkInputOnlyDigits("12345");
+        boolean test = libraryController.checkInputOnlyDigits("12345325");
 
         assertEquals(true,test);
     }
@@ -95,14 +112,13 @@ class LibraryControllerTest {
         // Registrera testboken som utlånad till testanvändaren
         libraryController.setCurrentBorrower(testB);
         libraryController.borrowMedia(testbok);
-        libraryController.returnMedia(testbok);
 
         // Verifiera att testboken är utlånad
-        assertFalse(testbok.borrowed);
+        assertTrue(testbok.borrowed);
+        libraryController.returnMedia(testbok);
 
-        // Rensa bort inskriven testdata
-        //libraryController.borrowed.removeLast();
-        //libraryController.writeToFile();
+        // Verifiera att testboken är återlämnad
+        assertFalse(testbok.borrowed);
     }
 
     @Test

@@ -7,3 +7,7 @@
 730421-7777;Carsten Panduro;040-2635222
 700311-8888;Pernilla Johansson;040-2833652
 681102-9999;Anders Boklund;040-2163542
+212-33-7831;Donald Duck;111111-2222
+121212121212;Tolvan Tolvanson;222222-33
+ABCabc;Bokstav Person;alfabetsnummer
+(((())));Paranteshjalten;123
